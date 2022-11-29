@@ -33,3 +33,11 @@ body {
     border-radius: 50%;
     width: 100px;
 }
+
+.text{ 
+    font-size: 30px;
+    color:black; 
+    text-align: right;
+    position : relative;
+    bottom: 500px;
+}
