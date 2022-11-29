@@ -43,6 +43,7 @@ body {
     width: 100px;
 }
 
+<<<<<<< HEAD
 .groupe1 .text1 {
     position: relative;
     right: -420px;
@@ -70,3 +71,12 @@ right: 50px;
 .h2{
 
 }
+=======
+.text{ 
+    font-size: 30px;
+    color:black; 
+    text-align: right;
+    position : relative;
+    bottom: 500px;
+}
+>>>>>>> 9aeb11ee7c834a778cb63676725700068927aa30
