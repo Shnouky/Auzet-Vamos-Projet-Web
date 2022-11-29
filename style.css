@@ -1,6 +1,13 @@
-.Menu{
-    position : fixed;
-    background-color: aqua;
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.menu{
+    position: fixed;
+    background-image: url(https://img.freepik.com/premium-vector/blue-wide-background-with-radial-blurred-gradient-center-composition-abstract-illustration-wallpaper_480270-93.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 200px;
     width: 100%;
     margin-top: -10px;
     margin-left: -10px;
@@ -10,26 +17,56 @@
 
 a {
     font-size: 25px;
-    background: -webkit-linear-gradient(black, black);
+    background: -webkit-linear-gradient(rgb(88, 32, 255), rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 50px;
     text-decoration: none;
-    opacity: 80%;
+    opacity: 50%;
     position : relative;
     bottom: 30px;
 }
 
 a:hover{
-    columns: blue;
     opacity: 100%;
 }
 
 body {
-    background-color :aquamarine;
+    background-attachment: fixed;
+    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-5g-smart-phone-technology-banner-picture-image_930357.jpg);
+    background-repeat: no-repeat;
+    background-size: 1930px 930px;
 }
 
 .logo{
     border-radius: 50%;
     width: 100px;
+}
+
+.groupe1 .text1 {
+    position: relative;
+    right: -420px;
+    top: -150px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.video{
+    position: relative;
+    top: 200px;
+    left: 50px;
+}
+
+.groupe2-image1 {
+    position: relative;
+float: left;
+width: 500px;
+top: 800px;
+right: 50px;
+}
+
+.h2{
+
 }
