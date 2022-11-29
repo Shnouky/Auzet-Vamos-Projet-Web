@@ -1,0 +1,35 @@
+.Menu{
+    position : fixed;
+    background-color: aqua;
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+    padding : 20px;
+    
+}
+
+a {
+    font-size: 25px;
+    background: -webkit-linear-gradient(black, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 50px;
+    text-decoration: none;
+    opacity: 80%;
+    position : relative;
+    bottom: 30px;
+}
+
+a:hover{
+    columns: blue;
+    opacity: 100%;
+}
+
+body {
+    background-color :aquamarine;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 100px;
+}
