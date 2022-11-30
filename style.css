@@ -43,7 +43,7 @@ body {
     width: 100px;
 }
 
-<<<<<<< HEAD
+
 .groupe1 .text1 {
     position: relative;
     right: -420px;
@@ -62,21 +62,20 @@ body {
 
 .groupe2-image1 {
     position: relative;
-float: left;
-width: 500px;
-top: 800px;
-right: 50px;
+    float: left;
+    width: 500px;
+    top: 800px;
+    right: 50px;
 }
 
 .h2{
 
 }
-=======
-.text{ 
+.texte{ 
     font-size: 30px;
-    color:black; 
-    text-align: right;
-    position : relative;
-    bottom: 500px;
+    color:white; 
+    text-align: center;
+    position:relative;
+    top: 150px;
 }
->>>>>>> 9aeb11ee7c834a778cb63676725700068927aa30
+
