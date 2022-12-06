@@ -3,6 +3,13 @@
     margin: 0%;
 }
 
+body {
+    background-attachment: fixed;
+    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-5g-smart-phone-technology-banner-picture-image_930357.jpg);
+    background-repeat: no-repeat;
+    background-size: 1930px 930px;
+}
+
 .menu{
     position: fixed;
     background-image: url(https://img.freepik.com/premium-vector/blue-wide-background-with-radial-blurred-gradient-center-composition-abstract-illustration-wallpaper_480270-93.jpg);
@@ -12,11 +19,11 @@
     margin-top: -10px;
     margin-left: -10px;
     padding : 20px;
-    
+    z-index: 3;
 }
 
 a {
-    font-size: 25px;
+    font-size: 23px;
     background: -webkit-linear-gradient(rgb(88, 32, 255), rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -31,47 +38,38 @@ a:hover{
     opacity: 100%;
 }
 
-body {
-    background-attachment: fixed;
-    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-5g-smart-phone-technology-banner-picture-image_930357.jpg);
-    background-repeat: no-repeat;
-    background-size: 1930px 930px;
-}
-
 .logo{
     border-radius: 50%;
     width: 100px;
+    padding: 0;
+    margin: 0;
+    transform: translateY(40%);
 }
 
-<<<<<<< HEAD
 .groupe1 .text1 {
     position: relative;
-    right: -420px;
+    right: -1100px;
     top: -150px;
     text-align: center;
     color: rgb(255, 255, 255);
-    
-}
+    width: 700px;
 
+}
 
 .video{
     position: relative;
     top: 200px;
-    left: 50px;
+    left: 100px;
 }
 
-.groupe2-image1 {
+.image-gr2 {
     position: relative;
-float: left;
-width: 500px;
-top: 800px;
-right: 50px;
+    width: 750px;
+    top: 500px;
+    right: 100px;
+    float: right;
 }
 
-.h2{
-
-}
-=======
 .text{ 
     font-size: 30px;
     color:black; 
@@ -79,4 +77,56 @@ right: 50px;
     position : relative;
     bottom: 500px;
 }
->>>>>>> 9aeb11ee7c834a778cb63676725700068927aa30
+
+.classe{
+    position: relative;
+    top:2000px
+}
+
+/*.groupe2{
+/*    position: relative;
+/*    background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-internet-background-picture-image_1018917.jpg);
+/*    background-repeat: no-repeat;
+/*    background-size: 1930px 1130px;
+/*    top: 317px;
+/*
+/*}*/
+
+.text2{
+    position: relative;
+    width: 500px;
+    top: 800px;
+    left: 300px;
+    color: white;
+    margin: 0%;
+}
+
+.image-gr3{
+    position: relative;
+    width: 900px;
+    top: 1400px;
+    left: 100px;
+}
+
+.text3{
+    position: relative;
+    top: 1150px;
+    left: 1200px;
+    color: white;
+    margin: 0;
+    width: 500px;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;                
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(34, 0, 255);        
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 195, 255);        
+    border-radius: 50%;        
+    border: 4px solid rgb(34, 0, 255);   
+  }
