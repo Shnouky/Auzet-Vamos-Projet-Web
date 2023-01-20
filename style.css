@@ -3,38 +3,127 @@
     margin: 0%;
 }
 
-body {
-    background-attachment: fixed;
-    background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-5g-smart-phone-technology-banner-picture-image_930357.jpg);
-    background-repeat: no-repeat;
-    background-size: 1930px 930px;
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+    text-align:center;
+    color: white;
+}
+
+
+/*wave*/
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:5vh;
+  top: auto;
+  margin-bottom:-7px; 
+  min-height:100px;
+  max-height:150px;
+}
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+/*--- RESPONSIVE ---*/
+
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+}
+
+/*scrollbar*/
+
+body::-webkit-scrollbar {
+  width: 15px;                
+}
+
+body::-webkit-scrollbar-track {
+background: rgb(107, 181, 250);        
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: rgb(255, 255, 255);        
+border-radius: 50%;        
+border: 4px solid  rgb(107, 181, 250);  
+}
+
+
+/*menu*/
 
 .menu{
     position: fixed;
-    background-image: url(https://img.freepik.com/premium-vector/blue-wide-background-with-radial-blurred-gradient-center-composition-abstract-illustration-wallpaper_480270-93.jpg);
-    background-repeat: no-repeat;
+    background-color: rgb(107, 181, 250);
     background-size: 100% 200px;
     width: 100%;
     margin-top: -10px;
     margin-left: -10px;
     padding : 20px;
-    z-index: 3;
+    z-index: 4;
 }
 
-a {
-    font-size: 23px;
+.titrePage {
+    font-size: 21px;
     background: -webkit-linear-gradient(rgb(88, 32, 255), rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 50px;
+    margin: 49px;
     text-decoration: none;
     opacity: 50%;
     position : relative;
-    bottom: 30px;
+    bottom: 35px;
 }
 
-a:hover{
+.titrePage:hover{
     opacity: 100%;
 }
 
@@ -43,104 +132,1687 @@ a:hover{
     width: 100px;
     padding: 0;
     margin: 0;
-    transform: translateY(40%);
 }
 
-.groupe1 .text1 {
+.logo:hover {
+    opacity: 50%;
+}
+
+/*--- RESPONSIVE ---*/
+@media (max-width: 768px) {
+  .menu {
+    height: 50px;
+  }
+  .titrePage {
+    font-size: 12px;
+    margin: 10px;
+    position: relative;
+    bottom: 20px;
+  }
+  .logo {
+    width: 50px;
+  }
+}
+
+@media (max-width :480px){
+  .menu{
+    height: 40px;
+  }
+  .titrePage {
+    font-size: 10px;
+    margin: 5px;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+  }
+  .logo {
+    width: 40px;
+    position: relative;
+    right: 10px;
+    top: 5px;
+  }
+}
+
+
+
+/*index*/
+
+.I-groupe1 {
+  height: 100vh;
+}
+
+.I-texte1{
     position: relative;
     right: -1100px;
     top: -150px;
-    text-align: center;
-    color: rgb(255, 255, 255);
     width: 700px;
-
+    z-index: 2;
 }
 
-.video{
+.I-video{
     position: relative;
     top: 200px;
-    left: 100px;
+    right: 400px;
+    z-index: 2;
 }
 
-.image-gr2 {
-    position: relative;
-    width: 750px;
-    top: 500px;
-    right: 100px;
-    float: right;
+.I-groupe2 {
+  background-color: #141414;
+  height: 100vh;
+  z-index: 5;
+
 }
 
-.text{ 
-    font-size: 30px;
-    color:black; 
-    text-align: right;
-    position : relative;
-    bottom: 500px;
-}
-
-.classe{
-    position: relative;
-    top:2000px
-}
-
-/*.groupe2{
-/*    position: relative;
-/*    background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-internet-background-picture-image_1018917.jpg);
-/*    background-repeat: no-repeat;
-/*    background-size: 1930px 1130px;
-/*    top: 317px;
-/*
-/*}*/
-
-.text2{
+.I-texte2-1{
     position: relative;
     width: 500px;
-    top: 800px;
+    top: 150px;
     left: 300px;
-    color: white;
     margin: 0%;
+    z-index: 2;
+    font-size: 40px;
 }
 
-.image-gr3{
-    position: relative;
-    width: 900px;
-    top: 1400px;
-    left: 100px;
+.I-texte2-2{
+  position: relative;
+  width: 500px;
+  top: 200px;
+  left: 100px;
+  margin: 0%;
+  width: 900px;
+  font-size: 30px;
+  text-align: left;
+  z-index: 2;
 }
 
-.text3{
+.I-img1{
     position: relative;
-    top: 1150px;
+    width: 300px;
+    height: 500px;
+    bottom: 300px;
+    left: 800px;
+    z-index: 2;
+}
+
+.I-img2{
+  position: relative;
+  width: 300px;
+  height: 500px;
+  bottom: 300px;
+  left: 100px;
+  z-index: 2;
+}
+
+.I-texte3{
+    position: relative;
+    top: 600px;
     left: 1200px;
-    color: white;
     margin: 0;
     width: 500px;
+    z-index: 2;
 }
 
-body::-webkit-scrollbar {
-    width: 15px;                
+.logo-scroll {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 200px;
+  z-index: 3;
+  animation: logo-scroll 4s ease infinite;
+}
+
+.logo-scroll:hover {
+  opacity: 50%;
+}
+
+@keyframes logo-scroll {
+  0% { transform: translateY(0); }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
   }
-  
-  body::-webkit-scrollbar-track {
-    background: rgb(34, 0, 255);        
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 195, 255);        
-    border-radius: 50%;        
-    border: 4px solid rgb(34, 0, 255);   
+}
+
+/*--- RESPONSIVE ---*/
+
+@media (max-width: 768px) {
+
+  .I-video {
+    height: 300px;
+    width: 600px;
+    position: relative;
+    right: 0px;
+    top: 300px;
+
+  }
+  .I-texte1 {
+    font-size: 20px;
+    position: relative;
+    left: 40px;
+    top: -100px;
   }
 
-  .texte {
-    color:white;
+
+  .logo-scroll {
+    position: relative;
+    top: 400px;
+  }
+
+  .I-texte2-1 {
+    font-size: 40px;
+    position: relative;
+    left: 150px;
+  }
+
+  .I-texte2-2 {
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+    width: 750px;
     text-align: center;
-    align-items: center;
   }
 
- .texteMedical {
-    color:white;
-    position:absolute;
-    left: 1100px;
-    bottom: 400px;
+  .I-img1 {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    bottom: -250px;
+    left: 250px;
+  }
+
+  .I-img2 {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    bottom: -250px;
+    left: -250px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .I-video {
+    height: 150px;
+    width: 300px;
+    position: relative;
+    right: 0px;
+    top: 300px;
+
+  }
+  .I-texte1 {
+    font-size: 30px;
+    position: relative;
+    left: -170px;
+    top: 0px;
+  }
+
+
+  .logo-scroll {
+    position: relative;
+    top: 350px;
+  }
+
+  .I-groupe2 {
+    height: 230vh;
+  }
+
+  .I-texte2-1 {
+    font-size: 40px;
+    position: relative;
+    left: -70px;
+  }
+
+  .I-texte2-2 {
+    font-size: 20px;
+    position: relative;
+    left: 30px;
+    width: 300px;
+    text-align: center;
+  }
+
+  .I-img1 {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    bottom: -600px;
+    left: 0px;
+  }
+
+  .I-img2 {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    bottom: 50px;
+    left: 0px;
+  }
+
+}
+
+/*Fonctionnement des hologramme*/
+
+.FDH-img-1 {
+  position: relative;
+  right: 400px;
+  top: 200px;
+}
+
+.FDH-img-2 {
+  position: relative;
+  top: 300px;
+}
+
+.FDH-texte {
+  font-size: 30px;
+  position: relative;
+  left: 1070px;
+  top: -750px;
+  width: 800px;
+}
+
+@media (max-width: 768px) {
+  .FDH-img-1 {
+    width: 700px;
+    height: 450px;
+    position: relative;
+    left: 0px;
+  }
+
+  .FDH-texte {
+    font-size: 30px;
+    position: relative;
+    top: -200px;
+    left: -10px;
+  }
+
+
+  .FDH-img-2 {
+    width: 700px;
+    height: 450px;
+    position: relative;
+    left: 0px;
+    top: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .FDH-img-1 {
+    width: 350px;
+    height: 225px;
+    position: relative;
+    left: 0px;
+    top: 100px;
+  }
+
+  .FDH-texte {
+    font-size: 20px;
+    position: relative;
+    top: -300px;
+    left: 25px;
+    width: 300px;
+  }
+
+
+  .FDH-img-2 {
+    width: 350px;
+    height: 225px;
+    position: relative;
+    left: 0px;
+    top: 550px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+/*Différent type d'hologramme*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,700;);
+.snip1576 {
+  background-color: rgb(255, 255, 255);
+  color: #444;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin: 8px;
+  max-width: 750px;
+  min-width: 450px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  right: -120px;
+  top: 200px;
+}
+
+.snip1576 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1576:after {
+  background-color: #2ab0e5;
+  height: 150%;
+  bottom: -145%;
+  content: '';
+  left: 0;
+  right: 0;
+  position: absolute;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.snip1576 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.snip1576 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.snip1576 h3 {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.snip1576 h3 span {
+  display: block;
+  font-weight: 700;
+}
+
+.snip1576 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1576:hover > img,
+.snip1576.hover > img {
+  opacity: 0.1;
+}
+
+.snip1576:hover:after,
+.snip1576.hover:after {
+  bottom: 95%;
+}
+
+.snip1576:hover figcaption,
+.snip1576.hover figcaption {
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.vitrine {
+  position: relative;
+  float: left;
+  width: 2100px;
+  top: 180px;
+}
+
+.Opal {
+  position: relative;
+  right: 385px;
+}
+
+.Chorma {
+  position: relative;
+  bottom: 470px;
+  right: -385px;
+}
+
+.Zephyr {
+  position: relative;
+  bottom: 470px;
+  right: 385px;
+}
+
+.Hemera {
+  position: relative;
+  bottom: 940px;
+  right: -385px;
+}
+
+.pyramide {
+  position: relative;
+  float: left;
+  left: 850px;
+  top: -700px;
+}
+
+.Pixel {
+  position: relative;
+  bottom: 800px;
+  right: 605px;
+}
+
+.Prism {
+  position: relative;
+  bottom: 1270px;
+  right: -385px;
+}
+
+.Azur {
+  position: relative;
+  bottom: 1270px;
+  right: 385px;
+
+}
+
+.Horus {
+  position: relative;
+  bottom: 1740px;
+  right: -385px;
+}
+
+.diamant {
+  position: relative;
+  float: left;
+  left: 850px;
+  top: -1500px;
+}
+
+.Focus {
+  position: relative;
+  bottom: 1600px;
+  right: 605px;
+}
+
+.Illumina {
+  position: relative;
+  bottom: 2070px;
+  right: -385px;
+}
+
+.Illumina-Jewel {
+  position: relative;
+  bottom: 2070px;
+  right: -385px;
+}
+
+.Focus1 {
+  position: relative;
+  bottom: 2540px;
+  right: 385px;
+}
+
+.éole {
+  position: relative;
+  float: left;
+  left: 850px;
+  top: -2300px;
+}
+
+.Eole {
+  position: relative;
+  bottom: 2400px;
+  right: 570px;
+}
+
+.Eole1 {
+  position: relative;
+  bottom: 3810px;
+  right: -385px;
+}
+
+.Eole2 {
+  position: relative;
+  bottom: 2870px;
+  right: 385px;
+}
+
+.Eole3 {
+  position: relative;
+  bottom: 2400px;
+  right: -385px;
+}
+
+.scroll-ligne {
+  position: fixed;
+  float: left;
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 100vh;
+  font-size: 20px;
+  z-index: 3;
+  text-align: left;
+  text-align: center;
+}
+
+.sl-vitrine {
+  position: relative;
+  top: 300px;
+  text-decoration: none;
+  color: #141414;
+  float: left;
+}
+
+.sl-pyrammide {
+  position: relative;
+  top: 400px;
+  text-decoration: none;
+  color: #141414;
+  float: left;
+}
+
+.sl-diamant {
+  position: relative;
+  top: 500px;
+  text-decoration: none;
+  color: #141414;
+  float: left;
+}
+
+.sl-eole {
+  position: relative;
+  top: 600px;
+  text-decoration: none;
+  color: #141414;
+  float: left;
+}
+
+@media (max-width: 768px) {
+  .snip1576 {
+    width: 100px;
+    height: 400px;
+  }
+
+  .vitrine {
+    position: relative;
+    float: left;
+    width: 400px;
+    left: 300px;
+    top: 200px;
+  }
+    .Opal {
+      position: relative;
+      right: 0px;
+    }
     
- }
+    .Chorma {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Zephyr {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Hemera {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .pyramide {
+      position: relative;
+      bottom: 0px;
+      left: 0px;
+    }
+    
+    .Pixel {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Prism {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Azur {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    
+    }
+    
+    .Horus {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .diamant {
+      position: relative;
+      width: 0;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .Focus {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Illumina {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Illumina-Jewel {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Focus1 {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .éole {
+      position: relative;
+      top: 200px;
+      left: 300px;
+      width: 400px;
+    }
+    
+    .Eole {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Eole1 {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Eole2 {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    
+    .Eole3 {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    
+    }
+
+    .vitrine {
+      position: relative;
+      right: -120px;
+    }
+  
+    .pyramide {
+      position: relative;
+      float: right;
+      top: 200px;
+      width: 530px;
+    }
+
+    .diamant {
+        position: relative;
+        float: right;
+        top: 200px;
+        width: 530px;
+      }
+
+      .eole {
+        position: relative;
+        float: right;
+        top: 200px;
+        width: 530px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .snip1576 {
+        width: 300px;
+        height: 200px;
+      }
+    
+  .iris22 {
+  width: 500px;
+  height: 200px;
+}
+.iris32 {
+  width: 500px;
+  height: 200px;
+}
+.iris46 {
+  width: 500px;
+  height: 200px;
+}
+.iris75 {
+  width: 500px;
+  height: 200px;
+}
+.opal {
+  width: 500px;
+  height: 200px;
+}
+.chroma {
+  width: 500px;
+  height: 200px;
+}
+.zephyr {
+  width: 500px;
+  height: 200px;
+}
+.hemera {
+  width: 500px;
+  height: 200px;
+}
+.pixel {
+  width: 500px;
+  height: 200px;
+}
+.azur {
+  width: 500px;
+  height: 200px;
+}
+.horus {
+  width: 500px;
+  height: 200px;
+}
+.focus {
+  width: 500px;
+  height: 200px;
+}
+.crystal {
+  width: 500px;
+  height: 200px;
+}
+.jewel {
+  width: 500px;
+  height: 200px;
+}
+.focus1 {
+  width: 500px;
+  height: 200px;
+}
+.eole {
+  width: 500px;
+  height: 200px;
+}
+.eole3pale {
+  width: 500px;
+  height: 200px;
+}
+.eole2pale {
+  width: 500px;
+  height: 200px;
+}
+
+.eole1pale {
+  width: 500px;
+  height: 200px;
+}
+
+      .scroll-ligne {
+        display: none;
+      }
+
+      .vitrine {
+        position: relative;
+        float: left;
+        width: 400px;
+        left: 125px;
+        top: 150px;
+        font-size: 25px
+      }
+
+        .Iris {
+          position: relative;
+          left: -150px;
+
+        }
+        .Opal {
+          position: relative;
+          right: 25px;
+        }
+        
+        .Chorma {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Zephyr {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Hemera {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .pyramide {
+          position: relative;
+          bottom: 0px;
+          left: 230px;
+          font-size: 25px
+        }
+        
+        .Pixel {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Prism {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Azur {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        
+        }
+        
+        .Horus {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .diamant {
+          position: relative;
+          width: 0;
+          top: 0px;
+          left: 230px;
+          font-size: 25px
+        }
+        
+        .Focus {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Illumina {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Illumina-Jewel {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Focus1 {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .éole {
+          position: relative;
+          top: 200px;
+          left: 130px;
+          width: 400px;
+          font-size: 25px
+        }
+        
+        .Eole {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Eole1 {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+          padding-bottom: 300px;
+        }
+        
+        .Eole2 {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        }
+        
+        .Eole3 {
+          position: relative;
+          bottom: 0px;
+          right: 0px;
+        
+        }
+    
+        .vitrine {
+          position: relative;
+          right: -120px;
+        }
+      
+        .pyramide {
+          position: relative;
+          float: right;
+          top: 200px;
+          width: 530px;
+        }
+    
+        .diamant {
+            position: relative;
+            float: right;
+            top: 200px;
+            width: 530px;
+          }
+    
+          .eole {
+            position: relative;
+            float: right;
+            top: 200px;
+            width: 530px;
+          }
+        }
+
+
+/*Composant*/
+
+.C-texte {
+  font-size: 30px;
+  position: relative;
+  top: 200px;
+  padding-bottom: 100px;
+}
+
+/*A quoi ca sert*/
+
+.pub-vitrine{
+  position: relative;
+  top: 300px;
+}
+
+
+.AQCS-texte-1 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: 500px;
+}
+
+.AQCS-video-1 {
+  position: relative;
+  right: 300px;
+}
+
+.star-decede {
+  position: relative;
+  top: 400px;
+}
+
+.AQCS-texte-2 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: -500px;  
+}
+
+.AQCS-video-2 {
+  position: relative;
+  right: -300px;
+}
+
+.politique {
+  position: relative;
+  top: 500px;
+}
+
+.AQCS-texte-3 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: 500px
+}
+
+.AQCS-video-3 {
+  position: relative;
+  right: 300px;
+}
+
+.cirque {
+  position: relative;
+  top: 600px;
+}
+
+.AQCS-texte-4 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: -500px; 
+}
+
+.AQCS-video-4 {
+  position: relative;
+  right: -300px;
+}
+
+.ressentir {
+  position: relative;
+  top: 700px;
+}
+
+.AQCS-texte-5 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: 500px
+}
+
+.AQCS-video-5 {
+  position: relative;
+  right: 300px;
+}
+
+.concierge {
+  position: relative;
+  top: 800px;
+}
+
+.AQCS-texte-6 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: -500px; 
+}
+
+.AQCS-video-6 {
+  position: relative;
+  right: -300px;
+}
+
+.medecine {
+  position: relative;
+  top: 900px;
+}
+
+.AQCS-texte-7 {
+  font-size: 50px;
+  position: relative;
+  top: 250px;
+  left: 500px
+}
+
+.AQCS-video-7 {
+  position: relative;
+  right: 300px;
+  padding-bottom: 200px;
+}
+
+
+@media (max-width: 768px) {
+
+  .pub-vitrine{
+    position: relative;
+    top: 100px;
+  }
+
+  .AQCS-texte-1 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .AQCS-video-1 {
+    position: relative;
+    right: 0px;
+  }
+  
+  .star-decede {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-2 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left:  0px;
+  }
+  
+  .AQCS-video-2 {
+    position: relative;
+    right:  0px;
+  }
+  
+  .politique {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-3 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px
+  }
+  
+  .AQCS-video-3 {
+    position: relative;
+    right: 0px;
+  }
+  
+  .cirque {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-4 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left:  0px; 
+  }
+  
+  .AQCS-video-4 {
+    position: relative;
+    right:  0px;
+  }
+  
+  .ressentir {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-5 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px
+  }
+  
+  .AQCS-video-5 {
+    position: relative;
+    right: 0px;
+  }
+  
+  .concierge {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-6 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left:  0px; 
+  }
+  
+  .AQCS-video-6 {
+    position: relative;
+    right:  0px;
+  }
+  
+  .medecine {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-7 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px
+  }
+  
+  .AQCS-video-7 {
+    position: relative;
+    right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .pub-vitrine{
+    position: relative;
+    top: 100px;
+  }
+
+  .AQCS-texte-1 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 30px;
+  }
+  
+  .AQCS-video-1 {
+    position: relative;
+    right: 0px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .star-decede {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-2 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left:  0px;
+    font-size: 30px;
+  }
+  
+  .AQCS-video-2 {
+    position: relative;
+    right:  0px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .politique {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-3 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 30px;
+  }
+  
+  .AQCS-video-3 {
+    position: relative;
+    right: 0px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .cirque {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-4 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left:  0px;
+    font-size: 30px; 
+  }
+  
+  .AQCS-video-4 {
+    position: relative;
+    right:  0px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .ressentir {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-5 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 30px;
+  }
+  
+  .AQCS-video-5 {
+    position: relative;
+    right: 0px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .concierge {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-6 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left:  0px; 
+    font-size: 30px;
+  }
+  
+  .AQCS-video-6 {
+    position: relative;
+    right:  0px;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .medecine {
+    position: relative;
+    top: 100px;
+  }
+  
+  .AQCS-texte-7 {
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 30px;
+  }
+  
+  .AQCS-video-7 {
+    position: relative;
+    right: 0px;
+    width: 400px;
+    height: 200px;
+    padding-bottom: 100px;
+  }
+}
+/*contacte*/
+
+
+.formulaire {
+  position: relative;
+  top: 200px;
+}
+
+form{
+  max-width:850px;
+  margin:0 auto;
+  border-top:15px solid #313A3D;
+  background:#FFF;
+  padding:0 20px 60px;
+  text-align:center;
+  font-family:Raleway;
+  text-align:center;
+  color:#B6B6B6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity:0.95;
+  box-shadow:0 0 15px -1px #141414;
+}
+
+.contactez-nous{
+  text-transform:uppercase;
+  font-size:20px;
+  line-height:60px
+}
+
+.C-div *{box-sizing:border-box;}
+
+.C-div{
+  width:70%;
+  margin:10px auto;
+  height:50px;
+}
+
+.C-div input, textarea{
+  width:100%;
+  height:100%;
+  opacity:0.9;
+  padding-left:22%;
+  background-color:#E8E9EA;
+  border:0;
+  outline:none;
+  margin:0;
+}
+
+label{
+  display:block;
+  position:relative;
+  top:-50px;
+  width:100%;
+  height:100%;
+  background-color:#313A3D;
+  position:relative;
+  line-height:50px;
+  font-size:18px;
+  transition: all 0.3s ease-in-out,width 0.7s ease-in-out;
+  text-transform:uppercase;
+}
+
+.ouvert label{ width:20%; }
+#formContact .contactChamp:nth-child(3) label{
+  transition: all 0.3s ease-in-out, width 0.7s ease-in-out; }
+#formContact .contactChamp:nth-child(4) label{
+  transition: all 0.3s ease-in-out, width 0.9s ease-in-out; }
+#formContact .contactChamp:nth-child(5) label{
+  transition: all 0.3s ease-in-out, width 1.1s ease-in-out; }
+#formContact .contactChamp:nth-child(6) label{
+  transition: all 0.3s ease-in-out, width 1.3s ease-in-out; }
+
+
+div:hover label, div input:focus + label,div textarea:focus + label, .labelOuvert{
+  width:20%;
+}
+
+div input:focus + label,div textarea:focus + label{
+  background-color:rgb(116, 181, 89);
+  color:#313A3D;
+}
+
+input[type=submit]{
+  background-color:#313A3D;
+  border:0;
+  height:50px;
+  padding:0 20px;
+  text-transform:uppercase;
+  color:rgb(116, 181, 89);
+  font-size:15px;
+  margin-top:35px;
+}
+
+textarea{
+  resize: none;
+  padding-top:18px;
+  transition:all 0.3s ease-in-out;
+}
+
+textarea + label{
+  top:-54px;
+}
+
+textarea:focus, .messOuvert textarea{
+  height:150px;
+}
+
+textarea:focus + label,.messOuvert label{
+  top:-154px;
+  height:150px;
+  line-height:150px;
+}
+
+.messOuvert{
+  margin-bottom:100px
+}
+
+
+
+@media (max-width: 480px) {
+  .formulaire{
+    position: relative;
+    top: 100px;
+  }
+}
+
+/*banderol*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+.banderol {
+  height: 75px;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  position: static;
+
+}
+
+.banderol-contacte {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 32px;
+  right: 500px;
+}
+
+a.banderol-contacte:hover {
+  opacity: 50%;
+}
+
+div.logo-reseau {
+  position: relative;
+  left: 1400px;
+  width: 180px;
+  height: 0;
+  bottom: 30px;
+}
+
+.twitter:hover {
+  opacity: 50%;
+}
+
+.facebook:hover {
+  opacity: 50%;
+}
+
+.insta:hover {
+  opacity: 50%;
+}
+
+.github:hover {
+  opacity: 50%;
+}
+
+.copyright {
+  position: relative;
+  top: 18px;
+  font-size: 10px;
+}
+
+.B-texte {
+  position: relative;
+  top: 10px;
+  
+}
+
+.container.demo {
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
+
+.demo .large-header {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+  background-size: 1900px 950px;
+background-attachment: fixed;
+}
+
+@media (max-width: 768px){
+
+
+  .banderol-contacte {
+    position: relative;
+    left: -300px;
+    top: 32px;
+  }
+  
+  div.logo-reseau {
+    position: relative;
+    left: 580px;
+  }
+}
+
+@media (max-width: 480px){
+  
+  .B-texte {
+    font-size: 10px;
+  }
+
+  .banderol-contacte {
+    position: relative;
+    left: -125px;
+    top: 23px;
+    font-size: 10px;
+  }
+  .twitter {
+    width: 10px;
+    height: 15px;
+  }
+  .facebook {
+    width: 15px;
+    height: 15px;
+  }
+  .insta {
+    width: 10px;
+    height: 15px;
+  }
+  .github {
+    width: 15px;
+    height: 15px;
+  }
+
+
+  div.logo-reseau {
+    position: relative;
+    left: 220px;
+    top: -20px;
+
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .demo .main-title {
+     font-size: 3em;
+  }
+}
+
